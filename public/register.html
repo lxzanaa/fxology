@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<style>
+    .custom-checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: #252628;
+        border: 2px solid #FFFFFF1A;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custom-checkbox:checked {
+        background-color: #58E87733;
+        border-color: #334D3B;
+    }
+
+    .custom-checkbox:checked::after {
+        content: url(./img/Vector.svg);
+    }
+</style>
+
+<body class="bg-[#0E0F11]" >
+
+    <!-- <button id="open-modal-1" >open modal</button> -->
+    <div id="modal-1" class="absolute top-0 left-0 z-50 bg-[#0D331566]/40 h-full w-full flex justify-center items-center hidden opacity-0 inset-0">
+        <div class="pr-8">
+            <button id="close-modal-1" class="p-3 bg-[#0E0F11] rounded-lg flex ml-auto translate-x-8">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9L8.71968 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M8.71968 9L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="w-[436px] border-white/10 border p-1.5 rounded-2xl bg-[#0E0F11] relative"
+                style="background: linear-gradient(0deg, #0E0F11, #0E0F11), linear-gradient(167.98deg, #161B1F 0.59%, rgba(22, 27, 31, 0) 40.04%);">
+                <div>
+                    <img class="absolute top-0 left-4" src="./img/register/shadow-mini.png" alt="shadow">
+                </div>
+                <div class="border-white/10 border rounded-[14px] p-6">
+                    <div class="mb-6">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.56 10.7401L20.21 9.16008C19.96 8.86008 19.75 8.30008 19.75 7.90008V6.20008C19.75 5.14008 18.88 4.27008 17.82 4.27008H16.12C15.72 4.27008 15.15 4.06008 14.85 3.81008L13.27 2.46008C12.58 1.87008 11.45 1.87008 10.76 2.46008L9.16 3.81008C8.86 4.06008 8.3 4.27008 7.9 4.27008H6.17C5.11 4.27008 4.24 5.14008 4.24 6.20008V7.90008C4.24 8.29008 4.04 8.85008 3.79 9.15008L2.44 10.7401C1.86 11.4401 1.86 12.5601 2.44 13.2401L3.79 14.8301C4.04 15.1201 4.24 15.6901 4.24 16.0801V17.7901C4.24 18.8501 5.11 19.7201 6.17 19.7201H7.91C8.3 19.7201 8.87 19.9301 9.17 20.1801L10.75 21.5301C11.44 22.1201 12.57 22.1201 13.26 21.5301L14.84 20.1801C15.14 19.9301 15.7 19.7201 16.1 19.7201H17.8C18.86 19.7201 19.73 18.8501 19.73 17.7901V16.0901C19.73 15.6901 19.94 15.1301 20.19 14.8301L21.54 13.2501C22.15 12.5701 22.15 11.4401 21.56 10.7401ZM11.25 8.13008C11.25 7.72008 11.59 7.38008 12 7.38008C12.41 7.38008 12.75 7.72008 12.75 8.13008V12.9601C12.75 13.3701 12.41 13.7101 12 13.7101C11.59 13.7101 11.25 13.3701 11.25 12.9601V8.13008ZM12 16.8701C11.45 16.8701 11 16.4201 11 15.8701C11 15.3201 11.44 14.8701 12 14.8701C12.55 14.8701 13 15.3201 13 15.8701C13 16.4201 12.56 16.8701 12 16.8701Z"
+                                fill="url(#paint0_linear_62_14850)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_62_14850" x1="12.0025" y1="2.01758" x2="12.0025"
+                                    y2="21.9726" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#58E877" />
+                                    <stop offset="1" stop-color="#C8FBD3" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h4 class="text-white text-sm mb-6">Blacklist Restrictions</h4>
+                    <p class="text-white/50 text-sm mb-8">Your profile has been marked as being on the blacklist, so
+                        your order cannot be completed at this
+                        time.You can to <a class="underline text-[#FFFBA1]" href="#">contact support</a> for further
+                        information.</p>
+                    <button id="close-modal-1"
+                        class="flex items-center gap-2 py-3 px-7 text-white font-semibold text-sm rounded-xl"
+                        style="background: linear-gradient(185.85deg, rgba(255, 255, 255, 0.1) 15.16%, rgba(255, 255, 255, 0) 86.96%); border: 1px solid; border-image-source: linear-gradient(262.74deg, rgba(255, 255, 255, 0.1) 12.49%, rgba(255, 255, 255, 0.05) 102.33%), radial-gradient(129.17% 687.04% at 102.36% 129.17%, rgba(255, 255, 255, 0) 14.78%, rgba(255, 255, 255, 0.5) 66%, rgba(255, 255, 255, 0) 100%) ;">Close
+                        <span>
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1203 5.95312L16.167 9.99979L12.1203 14.0465" stroke="white"
+                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M4.83282 10H16.0528" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="bg-[#0D0E10] relative  z-20  w-full flex items-center justify-center  pt-4 pb-3.5">
+        <div class="max-w-[1248px] w-full flex gap-4 mx-auto">
+            <div class="flex flex-col  max-w-[436px] w-full px-[17px] pt-[17px] pb-6 rounded-[20px] border border-[#FFFFFF1A]"
+                style="
+            background-image: url(./img/steps.png) ;
+            background-size: cover;
+            background-position: top;
+                ">
+                <a href="#" class="max-w-[88px] w-full mb-[406px] ">
+                    <svg width="88" height="33" viewBox="0 0 88 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M77.2374 32.0863V30.3205H78.6792C78.9101 30.3205 79.1076 30.3093 79.2715 30.287C79.4429 30.2721 79.6217 30.2348 79.8079 30.1752C79.9942 30.1156 80.1544 30.0299 80.2885 29.9181C80.4301 29.8064 80.5679 29.6499 80.702 29.4487C80.8362 29.255 80.9554 29.0203 81.0597 28.7446L81.4508 27.6606L76.9357 15.8809H79.2044L82.4567 24.8889L85.776 15.8809H88.0001L82.7026 29.5829C82.3226 30.5366 81.8457 31.2295 81.272 31.6616C80.6983 32.0938 79.9793 32.3098 79.115 32.3098C78.4966 32.3098 77.8707 32.2353 77.2374 32.0863Z"
+                            fill="white" />
+                        <path
+                            d="M63.9265 21.1894C63.9265 20.1314 64.1389 19.1777 64.5636 18.3283C64.9883 17.4789 65.6029 16.8046 66.4076 16.3054C67.2198 15.8062 68.1548 15.5566 69.2128 15.5566C70.1144 15.5566 70.9004 15.7504 71.571 16.1378C72.249 16.5252 72.7669 17.0729 73.1245 17.7807L73.281 15.8807H75.2033V26.6099C75.2033 28.3683 74.6966 29.769 73.6833 30.8121C72.6775 31.8552 71.3177 32.3768 69.604 32.3768C68.0841 32.3768 66.8323 31.9707 65.8488 31.1586C64.8653 30.3539 64.2693 29.2437 64.0606 27.8281H66.2176C66.3592 28.6551 66.7243 29.2959 67.3129 29.7504C67.9015 30.2049 68.6652 30.4321 69.604 30.4321C70.6546 30.4321 71.4965 30.1117 72.1298 29.471C72.7631 28.8377 73.0798 27.992 73.0798 26.934V24.6876C72.7073 25.3432 72.1745 25.8536 71.4816 26.2187C70.7887 26.5838 70.0026 26.7663 69.1234 26.7663C68.0878 26.7663 67.1713 26.5205 66.3741 26.0287C65.5769 25.537 64.9696 24.8701 64.5524 24.0282C64.1351 23.1862 63.9265 22.24 63.9265 21.1894ZM66.0723 21.1447C66.0723 22.2176 66.3815 23.1117 67 23.827C67.6258 24.5348 68.4529 24.8887 69.4811 24.8887C70.554 24.8887 71.4071 24.546 72.0404 23.8605C72.6737 23.1676 72.9904 22.2623 72.9904 21.1447C72.9904 20.042 72.6775 19.1479 72.0516 18.4624C71.4332 17.777 70.5838 17.4342 69.5034 17.4342C68.4529 17.4342 67.6184 17.7882 67 18.496C66.3815 19.1963 66.0723 20.0793 66.0723 21.1447Z"
+                            fill="white" />
+                        <path
+                            d="M52.2474 25.6935C51.1521 24.5908 50.6045 23.1789 50.6045 21.4578C50.6045 19.7366 51.1521 18.3284 52.2474 17.2332C53.3501 16.1305 54.7471 15.5791 56.4385 15.5791C58.1149 15.5791 59.5007 16.1305 60.596 17.2332C61.6987 18.3284 62.2501 19.7366 62.2501 21.4578C62.2501 23.1789 61.6987 24.5908 60.596 25.6935C59.5007 26.7963 58.1149 27.3476 56.4385 27.3476C54.7471 27.3476 53.3501 26.7963 52.2474 25.6935ZM53.7897 18.6078C53.1117 19.338 52.7727 20.288 52.7727 21.4578C52.7727 22.6275 53.1117 23.5812 53.7897 24.3189C54.4677 25.0565 55.3506 25.4253 56.4385 25.4253C57.5188 25.4253 58.398 25.0565 59.076 24.3189C59.7615 23.5812 60.1042 22.6275 60.1042 21.4578C60.1042 20.288 59.7615 19.338 59.076 18.6078C58.398 17.8702 57.5188 17.5014 56.4385 17.5014C55.3506 17.5014 54.4677 17.8702 53.7897 18.6078Z"
+                            fill="white" />
+                        <path d="M48.1681 27.0681H46.0111V10.2256H48.1681V27.0681Z" fill="white" />
+                        <path
+                            d="M33.5832 25.6935C32.4879 24.5908 31.9403 23.1789 31.9403 21.4578C31.9403 19.7366 32.4879 18.3284 33.5832 17.2332C34.6859 16.1305 36.0829 15.5791 37.7743 15.5791C39.4507 15.5791 40.8365 16.1305 41.9318 17.2332C43.0345 18.3284 43.5859 19.7366 43.5859 21.4578C43.5859 23.1789 43.0345 24.5908 41.9318 25.6935C40.8365 26.7963 39.4507 27.3476 37.7743 27.3476C36.0829 27.3476 34.6859 26.7963 33.5832 25.6935ZM35.1255 18.6078C34.4475 19.338 34.1085 20.288 34.1085 21.4578C34.1085 22.6275 34.4475 23.5812 35.1255 24.3189C35.8035 25.0565 36.6865 25.4253 37.7743 25.4253C38.8546 25.4253 39.7338 25.0565 40.4118 24.3189C41.0973 23.5812 41.4401 22.6275 41.4401 21.4578C41.4401 20.288 41.0973 19.338 40.4118 18.6078C39.7338 17.8702 38.8546 17.5014 37.7743 17.5014C36.6865 17.5014 35.8035 17.8702 35.1255 18.6078Z"
+                            fill="white" />
+                        <rect width="29.1305" height="29.1305" rx="4.3584" fill="url(#paint0_linear_22_13501)" />
+                        <path
+                            d="M5.76312 3.73312L6.07429 2.84668H6.58681V4.70847H6.24949V4.14104C6.24949 3.79239 6.25298 3.48471 6.25995 3.21799C6.2216 3.34873 6.17453 3.49168 6.11875 3.64683L5.74221 4.70847H5.45195L5.0728 3.64683C5.00655 3.45333 4.96036 3.31213 4.93421 3.22322C4.94118 3.48819 4.94467 3.79413 4.94467 4.14104V4.70847H4.60474V2.84668H5.11725L5.43888 3.75142C5.4598 3.81244 5.51297 3.98066 5.59839 4.25609C5.65417 4.06259 5.70908 3.88827 5.76312 3.73312Z"
+                            fill="black" />
+                        <path d="M2.87854 2.84668H4.42654V3.16308H3.83035V4.70847H3.47473V3.16308H2.87854V2.84668Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.95224 12.1362H8.0409C7.9457 12.1362 7.8981 12.1362 7.86173 12.1548C7.82975 12.1711 7.80375 12.1971 7.78745 12.229C7.76892 12.2654 7.76892 12.313 7.76892 12.4082V13.3195V25.6657C7.76892 25.7609 7.76892 25.8085 7.78745 25.8449C7.80375 25.8768 7.82975 25.9028 7.86173 25.9191C7.8981 25.9377 7.9457 25.9377 8.0409 25.9377H9.86357C9.95878 25.9377 10.0064 25.9377 10.0427 25.9191C10.0747 25.9028 10.1007 25.8768 10.117 25.8449C10.1356 25.8085 10.1356 25.7609 10.1356 25.6657V19.9674C10.1356 19.8722 10.1356 19.8246 10.1541 19.7882C10.1704 19.7562 10.1964 19.7302 10.2284 19.7139C10.2647 19.6954 10.3123 19.6954 10.4075 19.6954H16.1818C16.277 19.6954 16.3246 19.6954 16.361 19.6769C16.393 19.6606 16.419 19.6346 16.4353 19.6026C16.4538 19.5662 16.4538 19.5186 16.4538 19.4234V18.1399C16.4538 17.898 16.4538 17.777 16.4987 17.7282C16.5375 17.6859 16.5951 17.6662 16.6517 17.6756C16.7171 17.6865 16.7915 17.7819 16.9403 17.9727L19.6768 21.4826C19.7234 21.5424 19.7467 21.5723 19.7557 21.6053C19.7636 21.6345 19.7636 21.6652 19.7557 21.6943C19.7467 21.7274 19.7234 21.7572 19.6768 21.817L16.8375 25.4587C16.7277 25.5996 16.6727 25.6701 16.6732 25.7292C16.6736 25.7807 16.6973 25.8292 16.7376 25.8612C16.784 25.8979 16.8733 25.8979 17.052 25.8979H19.3632C19.4119 25.8979 19.4363 25.8979 19.4588 25.8916C19.4787 25.8861 19.4974 25.8769 19.514 25.8647C19.5327 25.8508 19.5477 25.8316 19.5777 25.7932L21.0931 23.8494C21.1662 23.7557 21.2028 23.7088 21.2472 23.6919C21.2861 23.6771 21.3291 23.6771 21.3681 23.6919C21.4125 23.7088 21.449 23.7557 21.5221 23.8494L23.0376 25.7932C23.0675 25.8316 23.0825 25.8508 23.1013 25.8647C23.1179 25.8769 23.1366 25.8861 23.1565 25.8916C23.1789 25.8979 23.2033 25.8979 23.2521 25.8979H25.5632C25.7419 25.8979 25.8313 25.8979 25.8776 25.8612C25.918 25.8292 25.9417 25.7807 25.9421 25.7292C25.9425 25.6701 25.8876 25.5996 25.7777 25.4587L22.9385 21.817C22.8919 21.7572 22.8685 21.7274 22.8596 21.6943C22.8517 21.6652 22.8517 21.6345 22.8596 21.6053C22.8685 21.5723 22.8919 21.5424 22.9385 21.4826L25.8327 17.7705C25.9425 17.6296 25.9975 17.5591 25.997 17.4999C25.9966 17.4485 25.9729 17.4 25.9326 17.368C25.8862 17.3313 25.7969 17.3313 25.6182 17.3313H23.307C23.2582 17.3313 23.2339 17.3313 23.2114 17.3375C23.1915 17.3431 23.1728 17.3522 23.1562 17.3645C23.1375 17.3783 23.1225 17.3976 23.0925 17.436L21.5221 19.4502C21.449 19.544 21.4125 19.5908 21.3681 19.6077C21.3291 19.6225 21.2861 19.6225 21.2472 19.6077C21.2028 19.5908 21.1662 19.544 21.0931 19.4502L19.5227 17.436C19.4928 17.3976 19.4778 17.3783 19.459 17.3645C19.4424 17.3522 19.4237 17.3431 19.4038 17.3375C19.3814 17.3313 19.357 17.3313 19.3083 17.3313H16.455C16.4544 17.3313 16.4538 17.3307 16.4538 17.33C16.4538 17.3293 16.4532 17.3288 16.4526 17.3288H10.4075C10.3123 17.3288 10.2647 17.3288 10.2284 17.3102C10.1964 17.2939 10.1704 17.2679 10.1541 17.236C10.1356 17.1996 10.1356 17.152 10.1356 17.0568V14.7748C10.1356 14.6796 10.1356 14.632 10.1541 14.5957C10.1704 14.5637 10.1964 14.5377 10.2284 14.5214C10.2647 14.5029 10.3123 14.5029 10.4075 14.5029H18.0355C18.1307 14.5029 18.1783 14.5029 18.2146 14.4843C18.2466 14.468 18.2726 14.442 18.2889 14.41C18.3074 14.3737 18.3074 14.3261 18.3074 14.2309V12.4082C18.3074 12.313 18.3074 12.2654 18.2889 12.229C18.2726 12.1971 18.2466 12.1711 18.2146 12.1548C18.1783 12.1362 18.1307 12.1362 18.0355 12.1362H8.95224Z"
+                            fill="black" />
+                        <defs>
+                            <linearGradient id="paint0_linear_22_13501" x1="10.1803" y1="3.46385" x2="26.7291"
+                                y2="20.4855" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3BE46A" />
+                                <stop offset="1" stop-color="#E8FFCA" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <div class="">
+                    <h2 class="max-w-[175px] text-white font-normal text-lg mb-[29px] leading-[35px]">Create your
+                        account in a few
+                        clicks</h2>
+                    <div class="max-w-[191px] flex gap-[18px] items-center mb-[43px]">
+                        <div class="flex flex-col items-center ">
+                            <div class="">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_128_1062)">
+                                        <rect width="32" height="32" rx="16" fill="#71FDA8" fill-opacity="0.1" />
+                                        <g filter="url(#filter0_f_128_1062)">
+                                            <ellipse cx="28.5" cy="49" rx="16.5" ry="16" fill="#71FDA8"
+                                                fill-opacity="0.6" />
+                                        </g>
+                                        <path
+                                            d="M17.8893 22H15.9693V13.664C15.4413 14.4 14.5933 14.784 13.4413 14.784H13.3133V12.944H13.4413C15.1053 12.944 15.9853 12.256 15.9853 10.96V10.8H17.8893V22Z"
+                                            fill="#58E877" />
+                                    </g>
+                                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5"
+                                        stroke="url(#paint0_linear_128_1062)" />
+                                    <defs>
+                                        <filter id="filter0_f_128_1062" x="-8" y="13" width="73" height="72"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                result="shape" />
+                                            <feGaussianBlur stdDeviation="10"
+                                                result="effect1_foregroundBlur_128_1062" />
+                                        </filter>
+                                        <linearGradient id="paint0_linear_128_1062" x1="18.8" y1="-16" x2="4.451"
+                                            y2="-11.9973" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#71FDA8" stop-opacity="0.2" />
+                                            <stop offset="1" stop-color="#71FDA8" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_128_1062">
+                                            <rect width="32" height="32" rx="16" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </div>
+                            <div class="min-h-10 w-[1px] bg-[#58E877]"></div>
+                            <div class="">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_128_1072)">
+                                        <path
+                                            d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                            fill="#71FDA8" fill-opacity="0.02" />
+                                        <path opacity="0.5"
+                                            d="M19.9581 13.968C19.9581 17.664 14.9501 17.664 14.4861 20.272H19.7501V22H12.3101V20.944C12.3101 16.656 18.0061 16.864 18.0061 14.032C18.0061 12.992 17.2861 12.288 16.1821 12.288C15.0141 12.288 14.1021 13.072 14.0701 14.512H12.0541C12.2301 11.984 13.9581 10.56 16.2141 10.56C18.4541 10.56 19.9581 11.936 19.9581 13.968Z"
+                                            fill="#58E877" />
+                                    </g>
+                                    <path
+                                        d="M0.5 16C0.5 7.43959 7.43959 0.5 16 0.5C24.5604 0.5 31.5 7.43959 31.5 16C31.5 24.5604 24.5604 31.5 16 31.5C7.43959 31.5 0.5 24.5604 0.5 16Z"
+                                        stroke="url(#paint0_linear_128_1072)" stroke-opacity="0.3" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_128_1072" x1="44.5714" y1="12.5714"
+                                            x2="41.5746" y2="-3.99268" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#71FDA8" stop-opacity="0.2" />
+                                            <stop offset="1" stop-color="#71FDA8" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_128_1072">
+                                            <path
+                                                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                                fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </div>
+                            <div class="min-h-10 w-[1px] bg-[#58E877]"></div>
+                            <div class="">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_22_13544)">
+                                        <path
+                                            d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                            fill="#71FDA8" fill-opacity="0.02" />
+                                        <path opacity="0.5"
+                                            d="M16.1966 22.256C13.5566 22.256 11.7486 20.8 11.6206 18.432H13.5886C13.7006 19.728 14.7086 20.512 16.1966 20.512C17.5726 20.512 18.4366 19.824 18.4366 18.768C18.4366 17.728 17.5886 17.088 16.1806 17.088H14.4366V15.504H16.1806C17.3166 15.504 18.0046 14.784 18.0046 13.904C18.0046 12.976 17.2526 12.288 16.1326 12.288C14.9966 12.288 14.1326 13.008 13.9886 14.112H12.0046C12.2286 11.968 13.8926 10.56 16.1966 10.56C18.3726 10.56 19.9246 11.808 19.9246 13.552C19.9246 14.88 19.0126 15.904 17.6686 16.192C19.3166 16.496 20.3086 17.552 20.3086 19.04C20.3086 20.944 18.6766 22.256 16.1966 22.256Z"
+                                            fill="#58E877" />
+                                    </g>
+                                    <path
+                                        d="M0.5 16C0.5 7.43959 7.43959 0.5 16 0.5C24.5604 0.5 31.5 7.43959 31.5 16C31.5 24.5604 24.5604 31.5 16 31.5C7.43959 31.5 0.5 24.5604 0.5 16Z"
+                                        stroke="url(#paint0_linear_22_13544)" stroke-opacity="0.3" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_22_13544" x1="44.5714" y1="12.5714"
+                                            x2="41.5746" y2="-3.99268" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#71FDA8" stop-opacity="0.2" />
+                                            <stop offset="1" stop-color="#71FDA8" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_22_13544">
+                                            <path
+                                                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                                fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-10">
+                            <a href="#" class="font-normal text-base text-[#FFFFFF] leading-[11px] py-[10.5px]">Sign
+                                Up</a>
+                            <a href="#" class="font-normal text-base text-[#FFFFFF80] leading-[11px] py-[10.5px]">Basic
+                                information
+                            </a>
+                            <a href="#"
+                                class="font-normal text-base text-[#FFFFFF80] leading-[11px] py-[10.5px]">Confirm email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center ">
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF80] mr-auto">Copyright © FXology 2024</a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline mr-2">Terms & Conditions </a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="max-w-[768px] relative w-full border border-[#FFFFFF1A] rounded-[20px] pl-[84px] pr-4 pt-4 pb-6"
+                class="max-w-[768px] relative w-full border border-[#FFFFFF1A] rounded-[20px] pl-[84px] pr-4 pt-4 pb-6"
+                style="background: linear-gradient(0deg, rgba(14, 15, 17, 0.5), rgba(14, 15, 17, 0.5)), linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%); width: 100%; ">
+                <div class="absolute top-0 left-[55px]">
+                    <svg width="134" height="55" viewBox="0 0 134 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_f_1_52097)">
+                            <path d="M27 4H109L124 45H10L27 4Z" fill="url(#paint0_linear_1_52097)" />
+                        </g>
+                        <g filter="url(#filter1_d_1_52097)">
+                            <rect x="27" width="82" height="3" fill="url(#paint1_linear_1_52097)" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_1_52097" x="0" y="-6" width="134" height="61"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_1_52097" />
+                            </filter>
+                            <filter id="filter1_d_1_52097" x="19" y="-6" width="98" height="19"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="2" />
+                                <feGaussianBlur stdDeviation="4" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.909804 0 0 0 0 1 0 0 0 0 0.792157 0 0 0 0.5 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_52097" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_52097"
+                                    result="shape" />
+                            </filter>
+                            <linearGradient id="paint0_linear_1_52097" x1="67" y1="-1.5" x2="68" y2="45"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#71FDA8" stop-opacity="0.2" />
+                                <stop offset="0.927583" stop-color="#71FDA8" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_1_52097" x1="27" y1="1.5" x2="109" y2="1.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#71FDA8" />
+                                <stop offset="1" stop-color="#E8FFCA" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="flex items-center mb-[30px]">
+                    </a>
+                    <a href="#" class="ml-auto font-normal text-sm text-[#FFFFFF] leading-[10px]">Already have an
+                        account?</a>
+                    <a href="#" class="flex items-center gap-1 rounded-xl  py-2 pl-4 pr-3 ml-4" style="
+                    background: linear-gradient(185.85deg, rgba(255, 255, 255, 0.1) 15.16%, rgba(255, 255, 255, 0) 86.96%);
+                    border: 1px solid #636568;
+                    border-image-source: linear-gradient(262.74deg, rgba(255, 255, 255, 0.1) 12.49%, rgba(255, 255, 255, 0.05) 102.33%),
+                    radial-gradient(129.17% 687.04% at 102.36% 129.17%, rgba(255, 255, 255, 0) 14.78%, rgba(255, 255, 255, 0.5) 66%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    ">
+                        <p class="text-[#FFFFFF] leading-[10px] text-sm">Log In</p>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6204 5.95312L15.667 9.99979L11.6204 14.0465" stroke="white" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4.33276 10H15.5528" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <h1 class="font-normal text-2xl mb-2 text-[#FFFFFF] leading-7">Welcome to FXology!</h1>
+                <p class="font-normal text-sm text-[#FFFFFF80] mb-8 leading-4">Let's Get Started</p>
+                <form class="flex flex-col gap-y-4 max-w-[567px]">
+                    <div class="max-w-[345px]">
+                        <div
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] mb-4">
+                            <label for="username" id="username-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Username</label>
+                            <input type="text" required id="username"
+                                class="w-full h-full bg-transparent text-white outline-none px-4"
+                                placeholder="Username">
+                        </div>
+                        <!-- if is error -->
+                        <!-- <span class="text-[#FFFBA1] text-xs absolute right-4 top-1/2 transform -translate-y-1/2">Error message</span> -->
+
+                        <div
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] mb-4">
+                            <label for="email" id="username-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Email</label>
+                            <input type="email" required id="email"
+                                class="w-full h-full bg-transparent text-white outline-none px-4" placeholder="Email">
+                        </div>
+
+                        <div
+                            class="inp_password w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] mb-4">
+                            <label for="password" id="password-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Password</label>
+                            <input type="password" required id="password"
+                                class="w-full h-full bg-transparent text-white outline-none px-4"
+                                placeholder="Password">
+
+                            <span id="password-toggle"
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#FFFFFF80]">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.9833 9.99993C12.9833 11.6499 11.65 12.9833 10 12.9833C8.35 12.9833 7.01666 11.6499 7.01666 9.99993C7.01666 8.34993 8.35 7.0166 10 7.0166C11.65 7.0166 12.9833 8.34993 12.9833 9.99993Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.99999 16.8913C12.9417 16.8913 15.6833 15.1579 17.5917 12.1579C18.3417 10.9829 18.3417 9.00794 17.5917 7.83294C15.6833 4.83294 12.9417 3.09961 9.99999 3.09961C7.05832 3.09961 4.31666 4.83294 2.40833 7.83294C1.65833 9.00794 1.65833 10.9829 2.40833 12.1579C4.31666 15.1579 7.05832 16.8913 9.99999 16.8913Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+
+                        <div
+                            class="inp_password w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] mb-4">
+                            <label for="password" id="password-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Confirm
+                                Password </label>
+                            <input type="password" required id="password"
+                                class="w-full h-full bg-transparent text-white outline-none px-4"
+                                placeholder="Confirm Password ">
+
+                            <span id="password-toggle"
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#FFFFFF80]">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.9833 9.99993C12.9833 11.6499 11.65 12.9833 10 12.9833C8.35 12.9833 7.01666 11.6499 7.01666 9.99993C7.01666 8.34993 8.35 7.0166 10 7.0166C11.65 7.0166 12.9833 8.34993 12.9833 9.99993Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.99999 16.8913C12.9417 16.8913 15.6833 15.1579 17.5917 12.1579C18.3417 10.9829 18.3417 9.00794 17.5917 7.83294C15.6833 4.83294 12.9417 3.09961 9.99999 3.09961C7.05832 3.09961 4.31666 4.83294 2.40833 7.83294C1.65833 9.00794 1.65833 10.9829 2.40833 12.1579C4.31666 15.1579 7.05832 16.8913 9.99999 16.8913Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-2 ">
+                        <input type="checkbox" name="checkbox" id="checkbox" class="custom-checkbox">
+                        <label for="checkbox" class="font-normal text-sm text-[#FFFFFF] leading-4">I agree to the
+                            processing of my personal data according to our <a href="#"
+                                class="text-[#FFFBA1] underline">Privacy Policy</a></label>
+                    </div>
+
+                    <div class="flex  gap-2 mb-[48px]">
+                        <input type="checkbox" name="checkbox2" id="checkbox2" class="custom-checkbox">
+                        <label for="checkbox2" class="font-normal text-sm text-[#FFFFFF] leading-4">I want to receive
+                            FXOLOGY Futures newsletters</label>
+                    </div>
+
+                    <button type="submit"
+                        class="bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl  hover:opacity-80 active:opacity-60 transition-all duration-300"
+                        style="box-shadow: 0px 0px 20px 0px #FFFFFF80;">
+                        <p class="">
+                            Next
+                        </p>
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="36" rx="12" fill="#58E877" />
+                            <path d="M20.0249 12.9414L25.0832 17.9997L20.0249 23.0581" stroke="white" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.9167 18H24.9417" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+                <div class="absolute bottom-0 right-0 pr-6 pb-6">
+                    <button class="z-20 p-2.5 ml-auto block rounded-xl"
+                        style="background: linear-gradient(135.81deg, #3BE46A 23.26%, #E8FFCA 80.89%);">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.9917 5H5.65841C5.44175 5 5.23341 5.00833 5.03341 5.03333C2.79175 5.225 1.66675 6.55 1.66675 8.99167V12.325C1.66675 15.6583 3.00008 16.3167 5.65841 16.3167H5.99175C6.17508 16.3167 6.41675 16.4417 6.52508 16.5833L7.52508 17.9167C7.96675 18.5083 8.68341 18.5083 9.12508 17.9167L10.1251 16.5833C10.2501 16.4167 10.4501 16.3167 10.6584 16.3167H10.9917C13.4334 16.3167 14.7584 15.2 14.9501 12.95C14.9751 12.75 14.9834 12.5417 14.9834 12.325V8.99167C14.9834 6.33333 13.6501 5 10.9917 5ZM5.41675 11.6667C4.95008 11.6667 4.58341 11.2917 4.58341 10.8333C4.58341 10.375 4.95841 10 5.41675 10C5.87508 10 6.25008 10.375 6.25008 10.8333C6.25008 11.2917 5.87508 11.6667 5.41675 11.6667ZM8.32508 11.6667C7.85841 11.6667 7.49175 11.2917 7.49175 10.8333C7.49175 10.375 7.86675 10 8.32508 10C8.78341 10 9.15841 10.375 9.15841 10.8333C9.15841 11.2917 8.79175 11.6667 8.32508 11.6667ZM11.2417 11.6667C10.7751 11.6667 10.4084 11.2917 10.4084 10.8333C10.4084 10.375 10.7834 10 11.2417 10C11.7001 10 12.0751 10.375 12.0751 10.8333C12.0751 11.2917 11.7001 11.6667 11.2417 11.6667Z"
+                                fill="black" fill-opacity="0.88" />
+                            <path
+                                d="M18.3167 5.65817V8.9915C18.3167 10.6582 17.8 11.7915 16.7667 12.4165C16.5167 12.5665 16.225 12.3665 16.225 12.0748L16.2334 8.9915C16.2334 5.65817 14.325 3.74984 10.9917 3.74984L5.91671 3.75817C5.62504 3.75817 5.42504 3.4665 5.57504 3.2165C6.20004 2.18317 7.33338 1.6665 8.99171 1.6665H14.325C16.9834 1.6665 18.3167 2.99984 18.3167 5.65817Z"
+                                fill="black" fill-opacity="0.88" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="absolute bottom-0 right-0 ">
+                    <img src="./img/gridbg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function inputs() {
+            const inputs = document.querySelectorAll("input");
+            let inp_password = document.querySelectorAll(".inp_password");
+
+            let label_inp = document.querySelectorAll(".label_inp");
+            let confirmPasswordToggle = document.querySelectorAll(
+                "#confirm-password-toggle"
+            );
+            let passwordToggle = document.querySelectorAll("#password-toggle");
+
+            inputs.forEach(function (item, index) {
+                if (item.type !== "checkbox") {
+                    const label = item.previousElementSibling; // Assuming the label is right before the input
+
+                    // Initial styles based on input's value
+                    if (!item.classList.contains("clicked")) {
+                        item.classList.add("transparent-placeholder");
+                    } else {
+                        item.classList.remove("transparent-placeholder");
+                    }
+
+                    // On focus (when input is clicked)
+                    item.addEventListener("focus", function () {
+                        item.classList.add("mt-2");
+                        item.classList.add("clicked");
+                        item.classList.remove("transparent-placeholder");
+                        label.classList.remove("top-1/2");
+                        label.classList.add("top-[12px]");
+                    });
+
+                    // On blur (when input loses focus)
+                    item.addEventListener("blur", function () {
+                        if (item.value === "") {
+                            // Reset styles if the input is empty
+                            item.classList.remove("clicked");
+                            item.classList.add("transparent-placeholder");
+                            label.classList.remove("top-[12px]");
+                            label.classList.add("top-1/2");
+                        }
+                    });
+                }
+            });
+
+            inp_password.forEach(function (item, index) {
+                if (item.type !== "checkbox") {
+                    let passwordField = item.querySelector("#password");
+                    let confirmPasswordField = item.querySelector("#confirm-password");
+
+                    // Toggle password visibility
+                    confirmPasswordToggle.forEach((icon, idx) => {
+                        icon.addEventListener("click", function () {
+                            let inputType = confirmPasswordField.type;
+                            if (inputType === "password") {
+                                confirmPasswordField.type = "text";
+                                icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 640 512"><path fill="#ffffff" d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zm151 118.3C226 97.7 269.5 80 320 80c65.2 0 118.8 29.6 159.9 67.7C518.4 183.5 545 226 558.6 256c-12.6 28-36.6 66.8-70.9 100.9l-53.8-42.2c9.1-17.6 14.2-37.5 14.2-58.7c0-70.7-57.3-128-128-128c-32.2 0-61.7 11.9-84.2 31.5l-46.1-36.1z"/></svg>`; // Change icon to 'eye closed'
+                            } else {
+                                confirmPasswordField.type = "password";
+                                icon.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9833 9.99993C12.9833 11.6499 11.65 12.9833 10 12.9833C8.35 12.9833 7.01666 11.6499 7.01666 9.99993C7.01666 8.34993 8.35 7.0166 10 7.0166C11.65 7.0166 12.9833 8.34993 12.9833 9.99993Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.99999 16.8913C12.9417 16.8913 15.6833 15.1579 17.5917 12.1579C18.3417 10.9829 18.3417 9.00794 17.5917 7.83294C15.6833 4.83294 12.9417 3.09961 9.99999 3.09961C7.05832 3.09961 4.31666 4.83294 2.40833 7.83294C1.65833 9.00794 1.65833 10.9829 2.40833 12.1579C4.31666 15.1579 7.05832 16.8913 9.99999 16.8913Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`; // Change icon back to 'eye'
+                            }
+                        });
+                    });
+
+                    passwordToggle.forEach((icon, idx) => {
+                        icon.addEventListener("click", function () {
+                            let inputType = passwordField.type;
+                            if (inputType === "password") {
+                                passwordField.type = "text";
+                                icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 640 512"><path fill="#ffffff" d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zm151 118.3C226 97.7 269.5 80 320 80c65.2 0 118.8 29.6 159.9 67.7C518.4 183.5 545 226 558.6 256c-12.6 28-36.6 66.8-70.9 100.9l-53.8-42.2c9.1-17.6 14.2-37.5 14.2-58.7c0-70.7-57.3-128-128-128c-32.2 0-61.7 11.9-84.2 31.5l-46.1-36.1z"/></svg>`; // Change icon to 'eye closed'
+                            } else {
+                                passwordField.type = "password";
+                                icon.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9833 9.99993C12.9833 11.6499 11.65 12.9833 10 12.9833C8.35 12.9833 7.01666 11.6499 7.01666 9.99993C7.01666 8.34993 8.35 7.0166 10 7.0166C11.65 7.0166 12.9833 8.34993 12.9833 9.99993Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.99999 16.8913C12.9417 16.8913 15.6833 15.1579 17.5917 12.1579C18.3417 10.9829 18.3417 9.00794 17.5917 7.83294C15.6833 4.83294 12.9417 3.09961 9.99999 3.09961C7.05832 3.09961 4.31666 4.83294 2.40833 7.83294C1.65833 9.00794 1.65833 10.9829 2.40833 12.1579C4.31666 15.1579 7.05832 16.8913 9.99999 16.8913Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`; // Change icon back to 'eye'
+                            }
+                        });
+                    });
+                }
+            });
+        }
+
+
+        function validateEmail(input) {
+            const container = document.getElementById('email-container');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(input.value)) {
+                container.classList.add('input-error');
+            } else {
+                container.classList.remove('input-error');
+            }
+        }
+
+
+        inputs();
+
+
+        let openModalButton1 = document.querySelectorAll('#open-modal-1'),
+            modal1 = document.querySelectorAll('#modal-1'),
+            closeModal1 = document.querySelectorAll('#close-modal-1');
+
+        openModalButton1.forEach(function (openModal) {
+            openModal.addEventListener('click', function () {
+                modal1.forEach(function (modal) {
+                    modal.classList.add('inset-1', 'opacity-1')
+                    modal.classList.remove('inset-0', 'opacity-0', 'hidden')
+                })
+            })
+        })
+        closeModal1.forEach(function (closeModal) {
+            closeModal.addEventListener('click', function () {
+                modal1.forEach(function (modal2) {
+                    modal2.classList.add('inset-0', 'opacity-0', 'hidden')
+                    modal2.classList.remove('inset-1', 'opacity-1')
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

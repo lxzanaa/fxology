@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.list_border_b{
+    display: none;
+}
+.list_svg_ui{
+    display: none;
+}
+.list_item:hover .list_svg_ui {
+    display: block;
+}
+
+.list_item_active{
+    background-color: #FFFFFF0D;
+}
+.list_svg_active{
+    display: block;
+}
+.list_border_b_active{
+    display: block;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px; /* Skrollning kengligi */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4A5568; /* Skrollning rangi */
+    max-width: 4px !important;
+    border-radius: 4px;
+    height: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Skroll trekining rangi */
+  }
+  
+
+  .transparent-placeholder::placeholder {
+    color: transparent
+}
+.invalid_border{
+    border: 1px solid  #FFFBA1;
+}
