@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+</head>
+<style>
+    .gradient-text {
+        background: linear-gradient(273.5deg, #58E877 -14.13%, #C7ECD8 34.59%, #FFFFFF 87.24%, #58E877 107.49%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0px 0px 18px #EBFBF273;
+    }
+
+    .custom-checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: #252628;
+        border: 2px solid #FFFFFF1A;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custom-checkbox:checked {
+        background-color: #58E87733;
+        border-color: #334D3B;
+    }
+
+    .custom-checkbox:checked::after {
+        content: url(./img/second/Vector.svg);
+    }
+</style>
+
+<body class="bg-[#0D0E10]">
+    <section class="relative w-full z-20 bg-[#0D0E10]  py-4">
+        <div class="max-w-[1248px] w-full mx-auto flex gap-x-4 px-4">
+            <div class="max-lg:hidden max-w-[702px] h-full w-full max-h-[768px] rounded-[20px] overflow-hidden">
+                <img src="./img/second/login/loginLeftBg.png" class="object-cover h-[768px]" alt="login Left Bg">
+            </div>
+            <div class="max-w-[530px] max-lg:px-4 max-lg:pb-4 max-lg:mx-auto gap-0 w-full border border-[#FFFFFF1A] rounded-[20px] relative flex flex-col items-center"
+                style="
+            background: linear-gradient(0deg, #0E0F11, #0E0F11),
+            linear-gradient(167.98deg, #161B1F 0.59%, rgba(22, 27, 31, 0) 40.04%);
+            ">
+                <div class="max-w-[114px] mb-[25px]">
+                    <img src="./img/second/login/light.png" class="w-full h-[45px] object-cover" alt="">
+                </div>
+                <a href="#"
+                    class="max-w-[48px] max-h-[48px] rounded-[10px] flex items-center justify-center w-full p-1 border-[0.46px] border-[#212826] mb-[33px]">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="5.98465" fill="url(#paint0_linear_1_49155)" />
+                        <rect width="40" height="40" rx="5.98465" fill="url(#paint1_linear_1_49155)" />
+                        <path
+                            d="M7.91355 5.1254L8.34083 3.9082H9.04458V6.46468H8.5814V5.68553C8.5814 5.20679 8.58618 4.7843 8.59576 4.41806C8.5431 4.59759 8.47847 4.79387 8.40187 5.00691L7.88483 6.46468H7.48628L6.96565 5.00691C6.87469 4.74121 6.81125 4.54732 6.77535 4.42524C6.78492 4.78909 6.78971 5.20918 6.78971 5.68553V6.46468H6.32294V3.9082H7.02669L7.46832 5.15054C7.49705 5.23431 7.57006 5.46531 7.68735 5.84351C7.76395 5.57781 7.83935 5.33844 7.91355 5.1254Z"
+                            fill="black" />
+                        <path d="M3.95245 3.9082H6.07806V4.34266H5.25942V6.46468H4.7711V4.34266H3.95245V3.9082Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.2928 16.6641H11.0414C10.9106 16.6641 10.8453 16.6641 10.7954 16.6895C10.7514 16.7119 10.7157 16.7476 10.6933 16.7915C10.6679 16.8414 10.6679 16.9068 10.6679 17.0375V18.2889V35.2418C10.6679 35.3725 10.6679 35.4378 10.6933 35.4878C10.7157 35.5317 10.7514 35.5674 10.7954 35.5898C10.8453 35.6152 10.9106 35.6152 11.0414 35.6152H13.5441C13.6749 35.6152 13.7402 35.6152 13.7902 35.5898C13.8341 35.5674 13.8698 35.5317 13.8922 35.4878C13.9176 35.4378 13.9176 35.3725 13.9176 35.2418V27.4172C13.9176 27.2865 13.9176 27.2212 13.943 27.1712C13.9654 27.1273 14.0011 27.0916 14.045 27.0692C14.095 27.0438 14.1603 27.0438 14.2911 27.0438H22.2199C22.3506 27.0438 22.416 27.0438 22.4659 27.0183C22.5099 26.996 22.5456 26.9603 22.5679 26.9163C22.5934 26.8664 22.5934 26.8011 22.5934 26.6703V24.9088C22.5934 24.5765 22.5934 24.4104 22.655 24.3434C22.7084 24.2854 22.7874 24.2583 22.8651 24.2712C22.9549 24.2861 23.057 24.4171 23.2614 24.6792L27.019 29.4987C27.083 29.5809 27.115 29.6219 27.1273 29.6673C27.1381 29.7073 27.1381 29.7495 27.1273 29.7895C27.115 29.8348 27.083 29.8759 27.019 29.958L23.1204 34.9583C22.9695 35.1518 22.8941 35.2486 22.8947 35.3298C22.8953 35.4005 22.9278 35.4671 22.9832 35.511C23.0469 35.5614 23.1696 35.5614 23.4149 35.5614H26.5885C26.6554 35.5614 26.6889 35.5614 26.7197 35.5528C26.747 35.5452 26.7727 35.5326 26.7955 35.5158C26.8213 35.4968 26.8418 35.4704 26.883 35.4176L28.9638 32.7487C29.0642 32.62 29.1144 32.5556 29.1753 32.5324C29.2288 32.5121 29.2878 32.5121 29.3413 32.5324C29.4023 32.5556 29.4525 32.62 29.5528 32.7487L31.6337 35.4176C31.6748 35.4704 31.6954 35.4968 31.7211 35.5158C31.744 35.5326 31.7696 35.5452 31.797 35.5528C31.8278 35.5614 31.8612 35.5614 31.9282 35.5614H35.1017C35.3471 35.5614 35.4698 35.5614 35.5334 35.511C35.5888 35.4671 35.6214 35.4005 35.6219 35.3298C35.6225 35.2486 35.5471 35.1518 35.3963 34.9583L31.4977 29.958C31.4337 29.8759 31.4017 29.8348 31.3894 29.7895C31.3785 29.7495 31.3785 29.7073 31.3894 29.6673C31.4017 29.6219 31.4337 29.5809 31.4977 29.4987L35.472 24.4013C35.6228 24.2078 35.6983 24.111 35.6976 24.0298C35.6971 23.9591 35.6646 23.8925 35.6092 23.8486C35.5455 23.7982 35.4228 23.7982 35.1775 23.7982H32.0039C31.937 23.7982 31.9035 23.7982 31.8727 23.8068C31.8454 23.8144 31.8197 23.827 31.7969 23.8438C31.7711 23.8628 31.7505 23.8892 31.7094 23.942L29.5528 26.708C29.4525 26.8368 29.4023 26.9011 29.3413 26.9243C29.2879 26.9446 29.2288 26.9446 29.1754 26.9243C29.1144 26.9011 29.0642 26.8368 28.9638 26.708L26.8073 23.942C26.7661 23.8892 26.7455 23.8628 26.7198 23.8438C26.697 23.827 26.6713 23.8144 26.644 23.8068C26.6131 23.7982 26.5797 23.7982 26.5127 23.7982H22.5954C22.5943 23.7982 22.5934 23.7973 22.5934 23.7961C22.5934 23.795 22.5925 23.7941 22.5913 23.7941H14.2911C14.1603 23.7941 14.095 23.7941 14.045 23.7687C14.0011 23.7463 13.9654 23.7106 13.943 23.6667C13.9176 23.6167 13.9176 23.5514 13.9176 23.4206V20.2872C13.9176 20.1565 13.9176 20.0911 13.943 20.0412C13.9654 19.9973 14.0011 19.9616 14.045 19.9392C14.095 19.9138 14.1603 19.9138 14.2911 19.9138H24.7652C24.8959 19.9138 24.9613 19.9138 25.0112 19.8883C25.0551 19.8659 25.0908 19.8302 25.1132 19.7863C25.1387 19.7364 25.1387 19.671 25.1387 19.5403V17.0375C25.1387 16.9068 25.1387 16.8414 25.1132 16.7915C25.0908 16.7476 25.0551 16.7119 25.0112 16.6895C24.9613 16.6641 24.8959 16.6641 24.7652 16.6641H12.2928Z"
+                            fill="black" />
+                        <defs>
+                            <linearGradient id="paint0_linear_1_49155" x1="13.9789" y1="4.75631" x2="36.7025"
+                                y2="28.1293" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3BE46A" />
+                                <stop offset="1" stop-color="#E8FFCA" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_1_49155" x1="13.9789" y1="4.75631" x2="36.7025"
+                                y2="28.1293" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3BE46A" />
+                                <stop offset="1" stop-color="#DEFFDF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <h1 class="max-w-[323px] gradient-text font-normal text-2xl md:text-[32px] mb-2 md:mb-4 leading-8 text-center">Welcome Back!
+                </h1>
+                <p class="max-w-[323px] font-semibold text-xs md:text-sm text-[#FFFFFF80] leading-[10px] mb-6 text-center">Please
+                    enter your details.</p>
+                <div class="w-full   max-w-[323px] flex items-center gap-2 mb-8">
+                    <a href="#"
+                        class="w-full bg-[#16191D] border border-[#2D3033] rounded-xl  flex items-center justify-center gap-x-2 h-12  md:px-[39.25px]">
+                        <img src="./img/second/login/login_google_logo.png" class="h-5" alt="">
+                        <p class="font-semibold text-sm text-[#FFFFFF] leading-[10px]">Google</p>
+                    </a>
+                    <a href="#"
+                        class="w-full bg-[#16191D] border border-[#2D3033] rounded-xl flex items-center justify-center  gap-x-2 h-12  md:px-[39.25px]">
+                        <svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.1366 2.29241C13.1366 3.03727 12.8055 3.78212 12.3376 4.31894C11.841 4.91395 10.9818 5.35621 10.2987 5.35621C10.2204 5.35621 10.1422 5.34602 10.094 5.33729C10.085 5.30092 10.0654 5.18745 10.0654 5.07398C10.0654 4.31894 10.4657 3.57408 10.8945 3.10273C11.4408 2.49026 12.3466 2.02764 13.108 2C13.1276 2.08438 13.1366 2.18912 13.1366 2.29241ZM15.8212 6.98341C15.8399 6.97154 15.8528 6.96341 15.8588 6.95891C14.8446 5.55359 13.3037 5.51576 12.8749 5.51576C12.2188 5.51576 11.6315 5.74072 11.138 5.92978C10.7803 6.0668 10.4718 6.18497 10.2221 6.18497C9.94599 6.18497 9.62994 6.06157 9.27727 5.92389C8.83219 5.75012 8.32879 5.55359 7.77386 5.55359C5.90198 5.55359 4 7.05348 4 9.88159C4 11.6448 4.70271 13.5026 5.57244 14.6984C6.3233 15.7168 6.97635 16.546 7.9123 16.546C8.35608 16.546 8.68146 16.4126 9.02365 16.2722C9.40315 16.1166 9.80333 15.9524 10.4086 15.9524C11.0204 15.9524 11.386 16.1066 11.7385 16.2552C12.0665 16.3935 12.3831 16.5271 12.8764 16.5271C13.8996 16.5271 14.5722 15.6324 15.2163 14.7362C15.9385 13.7179 16.241 12.7184 16.25 12.6719C16.1913 12.653 14.2307 11.8892 14.2307 9.73029C14.2307 7.99187 15.5673 7.14442 15.8212 6.98341Z"
+                                fill="white" />
+                        </svg>
+                        <p class="font-semibold text-sm text-[#FFFFFF] leading-[10px]">Apple</p>
+                    </a>
+                </div>
+                <div class="flex items-center gap-x-[13px] w-full justify-center mb-6">
+                    <div class="max-sm:hidden max-w-[87px] w-full bg-[#FFFFFF1A] h-[1px]"></div>
+                    <p class="font-normal text-xs text-[#FFFFFF80] leading-[8px]">or continue with email</p>
+                    <div class="max-sm:hidden max-w-[87px] w-full bg-[#FFFFFF1A] h-[1px]"></div>
+                </div>
+                <form class="max-w-[324px] w-full">
+                    <!-- if is error -->
+                    <!-- invalid_border input error class -->
+                    <div class="">
+                        <div
+                            class="w-full  relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] mb-4 ">
+                            <label for="email" id="username-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Email</label>
+                            <input type="email" required id="email"
+                                class="w-full  h-full bg-transparent text-white outline-none px-4 pt-3"
+                                placeholder="Email">
+                        </div>
+                        <!-- if is error -->
+                        <!-- <span class="block font-normal text-xs text-[#FFFBA1] pl-3 mb-4 leading-[8px]">Email address not found</span> -->
+                    </div>
+                    <div>
+                        <div
+                            class="inp_password w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] mb-4">
+                            <label for="password" id="password-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Password</label>
+                            <input type="password" required id="password"
+                                class="block w-full h-full  bg-transparent text-white outline-none px-4 pt-3"
+                                placeholder="Password">
+                            <span id="password-toggle"
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#FFFFFF80]">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.9833 9.99993C12.9833 11.6499 11.65 12.9833 10 12.9833C8.35 12.9833 7.01666 11.6499 7.01666 9.99993C7.01666 8.34993 8.35 7.0166 10 7.0166C11.65 7.0166 12.9833 8.34993 12.9833 9.99993Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.99999 16.8913C12.9417 16.8913 15.6833 15.1579 17.5917 12.1579C18.3417 10.9829 18.3417 9.00794 17.5917 7.83294C15.6833 4.83294 12.9417 3.09961 9.99999 3.09961C7.05832 3.09961 4.31666 4.83294 2.40833 7.83294C1.65833 9.00794 1.65833 10.9829 2.40833 12.1579C4.31666 15.1579 7.05832 16.8913 9.99999 16.8913Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                        <!-- if is error -->
+                        <!-- <span class="block font-normal text-xs text-[#FFFBA1] pl-3 mb-4 leading-[8px]">Email address not found</span> -->
+                    </div>
+                    <div class="w-full flex items-center justify-between gap-2 mb-6">
+                        <div class="flex items-center gap-2">
+                            <input autocomplete="off" type="checkbox" name="checkbox" id="checkbox"
+                                class="custom-checkbox mt-0">
+                            <label for="checkbox"
+                                class="cursor-pointer font-normal text-sm text-[#FFFFFF] leading-[10px]">Remember
+                                Me</label>
+                        </div>
+
+                        <a href="./password_reset.html" for="checkbox"
+                            class="cursor-pointer font-semibold text-sm text-[#FFFBA1] leading-[10px]">Forgot
+                            Password?</a>
+                    </div>
+                    <button type="submit"
+                        class="bg-[#FFFFFF] submit_btn transition-all duration-300 mb-12 w-full flex items-center justify-between gap-4 pr-1.5 pl-5 md:pl-[147px] py-1 rounded-xl"
+                >
+                        <p class="font-semibold text-sm leading-[10px]">
+                            Log In
+                        </p>
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="36" rx="12" fill="#58E877" />
+                            <path d="M20.0249 12.9414L25.0832 17.9997L20.0249 23.0581" stroke="white" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.9167 18H24.9417" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+                <div class="w-full flex max-md:flex-col items-center justify-center gap-4">
+                    <a href="./register.html" class="transition-all duration-300 hover:opacity-50 font-normal text-sm leading-[10px] text-[#FFFFFF]">
+                        Don't have an account yet?
+                    </a>
+                    <a href="./register.html" class="transition-all duration-300 hover:opacity-50 flex items-center gap-2  border border-[#262729] rounded-xl py-2 pr-3 pl-4">
+                        <p class="font-semibold text-sm leading-[10px] text-[#FFFFFF]">Sign Up</p>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.62036 3.95312L13.667 7.99979L9.62036 12.0465" stroke="white" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2.33276 8H13.5528" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/input.js"></script>
+    <script src="./js/paswoord.js"></script>
+</body>
+
+</html>

@@ -33,12 +33,17 @@
     .custom-checkbox:checked::after {
         content: url(./img/Vector.svg);
     }
+
+    .submit_btn:hover {
+        box-shadow: 0px 0px 20px 0px #FFFFFF80
+    }
 </style>
 
-<body class="bg-[#0E0F11]" >
+<body class="bg-[#0E0F11]">
 
     <!-- <button id="open-modal-1" >open modal</button> -->
-    <div id="modal-1" class="absolute top-0 left-0 z-50 bg-[#0D331566]/40 h-full w-full flex justify-center items-center hidden opacity-0 inset-0">
+    <div id="modal-1"
+        class="absolute top-0 left-0 z-50 bg-[#0D331566]/40 h-full w-full flex justify-center items-center hidden opacity-0 inset-0">
         <div class="pr-8">
             <button id="close-modal-1" class="p-3 bg-[#0E0F11] rounded-lg flex ml-auto translate-x-8">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -303,20 +308,20 @@
                     </a>
                     <a href="#" class="ml-auto font-normal text-sm text-[#FFFFFF] leading-[10px]">Already have an
                         account?</a>
-                    <a href="#" class="flex items-center gap-1 rounded-xl  py-2 pl-4 pr-3 ml-4" style="
-                    background: linear-gradient(185.85deg, rgba(255, 255, 255, 0.1) 15.16%, rgba(255, 255, 255, 0) 86.96%);
-                    border: 1px solid #636568;
-                    border-image-source: linear-gradient(262.74deg, rgba(255, 255, 255, 0.1) 12.49%, rgba(255, 255, 255, 0.05) 102.33%),
-                    radial-gradient(129.17% 687.04% at 102.36% 129.17%, rgba(255, 255, 255, 0) 14.78%, rgba(255, 255, 255, 0.5) 66%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-                    ">
-                        <p class="text-[#FFFFFF] leading-[10px] text-sm">Log In</p>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.6204 5.95312L15.667 9.99979L11.6204 14.0465" stroke="white" stroke-width="1.5"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M4.33276 10H15.5528" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
+                        <a href="#" class="transition-all duration-300 hover:opacity-50 flex items-center gap-1 rounded-xl  py-2 pl-4 pr-3 ml-4" style="
+                        background: linear-gradient(185.85deg, rgba(255, 255, 255, 0.1) 15.16%, rgba(255, 255, 255, 0) 86.96%);
+                        border: 1px solid #636568;
+                        border-image-source: linear-gradient(262.74deg, rgba(255, 255, 255, 0.1) 12.49%, rgba(255, 255, 255, 0.05) 102.33%),
+                        radial-gradient(129.17% 687.04% at 102.36% 129.17%, rgba(255, 255, 255, 0) 14.78%, rgba(255, 255, 255, 0.5) 66%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                        ">
+                            <p class="font-semibold text-[#FFFFFF]  text-sm leading-[10px]">Log In</p>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.6204 5.95312L15.667 9.99979L11.6204 14.0465" stroke="white" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.33276 10H15.5528" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
                 </div>
                 <h1 class="font-normal text-2xl mb-2 text-[#FFFFFF] leading-7">Welcome to FXology!</h1>
                 <p class="font-normal text-sm text-[#FFFFFF80] mb-8 leading-4">Let's Get Started</p>
@@ -407,9 +412,8 @@
                     </div>
 
                     <button type="submit"
-                        class="bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl  hover:opacity-80 active:opacity-60 transition-all duration-300"
-                        style="box-shadow: 0px 0px 20px 0px #FFFFFF80;">
-                        <p class="">
+                        class="submit_btn transition-all duration-300 bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl">
+                        <p class="font-semibold text-sm leading-[10px]">
                             Next
                         </p>
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -422,17 +426,17 @@
                     </button>
                 </form>
                 <div class="absolute bottom-0 right-0 pr-6 pb-6">
-                    <button class="z-20 p-2.5 ml-auto block rounded-xl"
-                        style="background: linear-gradient(135.81deg, #3BE46A 23.26%, #E8FFCA 80.89%);">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M10.9917 5H5.65841C5.44175 5 5.23341 5.00833 5.03341 5.03333C2.79175 5.225 1.66675 6.55 1.66675 8.99167V12.325C1.66675 15.6583 3.00008 16.3167 5.65841 16.3167H5.99175C6.17508 16.3167 6.41675 16.4417 6.52508 16.5833L7.52508 17.9167C7.96675 18.5083 8.68341 18.5083 9.12508 17.9167L10.1251 16.5833C10.2501 16.4167 10.4501 16.3167 10.6584 16.3167H10.9917C13.4334 16.3167 14.7584 15.2 14.9501 12.95C14.9751 12.75 14.9834 12.5417 14.9834 12.325V8.99167C14.9834 6.33333 13.6501 5 10.9917 5ZM5.41675 11.6667C4.95008 11.6667 4.58341 11.2917 4.58341 10.8333C4.58341 10.375 4.95841 10 5.41675 10C5.87508 10 6.25008 10.375 6.25008 10.8333C6.25008 11.2917 5.87508 11.6667 5.41675 11.6667ZM8.32508 11.6667C7.85841 11.6667 7.49175 11.2917 7.49175 10.8333C7.49175 10.375 7.86675 10 8.32508 10C8.78341 10 9.15841 10.375 9.15841 10.8333C9.15841 11.2917 8.79175 11.6667 8.32508 11.6667ZM11.2417 11.6667C10.7751 11.6667 10.4084 11.2917 10.4084 10.8333C10.4084 10.375 10.7834 10 11.2417 10C11.7001 10 12.0751 10.375 12.0751 10.8333C12.0751 11.2917 11.7001 11.6667 11.2417 11.6667Z"
-                                fill="black" fill-opacity="0.88" />
-                            <path
-                                d="M18.3167 5.65817V8.9915C18.3167 10.6582 17.8 11.7915 16.7667 12.4165C16.5167 12.5665 16.225 12.3665 16.225 12.0748L16.2334 8.9915C16.2334 5.65817 14.325 3.74984 10.9917 3.74984L5.91671 3.75817C5.62504 3.75817 5.42504 3.4665 5.57504 3.2165C6.20004 2.18317 7.33338 1.6665 8.99171 1.6665H14.325C16.9834 1.6665 18.3167 2.99984 18.3167 5.65817Z"
-                                fill="black" fill-opacity="0.88" />
-                        </svg>
-                    </button>
+                    <button class="max-md:hidden relative z-20 p-2.5 ml-auto block rounded-xl"
+                    style="background: linear-gradient(135.81deg, #3BE46A 23.26%, #E8FFCA 80.89%);">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.9917 5H5.65841C5.44175 5 5.23341 5.00833 5.03341 5.03333C2.79175 5.225 1.66675 6.55 1.66675 8.99167V12.325C1.66675 15.6583 3.00008 16.3167 5.65841 16.3167H5.99175C6.17508 16.3167 6.41675 16.4417 6.52508 16.5833L7.52508 17.9167C7.96675 18.5083 8.68341 18.5083 9.12508 17.9167L10.1251 16.5833C10.2501 16.4167 10.4501 16.3167 10.6584 16.3167H10.9917C13.4334 16.3167 14.7584 15.2 14.9501 12.95C14.9751 12.75 14.9834 12.5417 14.9834 12.325V8.99167C14.9834 6.33333 13.6501 5 10.9917 5ZM5.41675 11.6667C4.95008 11.6667 4.58341 11.2917 4.58341 10.8333C4.58341 10.375 4.95841 10 5.41675 10C5.87508 10 6.25008 10.375 6.25008 10.8333C6.25008 11.2917 5.87508 11.6667 5.41675 11.6667ZM8.32508 11.6667C7.85841 11.6667 7.49175 11.2917 7.49175 10.8333C7.49175 10.375 7.86675 10 8.32508 10C8.78341 10 9.15841 10.375 9.15841 10.8333C9.15841 11.2917 8.79175 11.6667 8.32508 11.6667ZM11.2417 11.6667C10.7751 11.6667 10.4084 11.2917 10.4084 10.8333C10.4084 10.375 10.7834 10 11.2417 10C11.7001 10 12.0751 10.375 12.0751 10.8333C12.0751 11.2917 11.7001 11.6667 11.2417 11.6667Z"
+                            fill="black" fill-opacity="0.88" />
+                        <path
+                            d="M18.3167 5.65817V8.9915C18.3167 10.6582 17.8 11.7915 16.7667 12.4165C16.5167 12.5665 16.225 12.3665 16.225 12.0748L16.2334 8.9915C16.2334 5.65817 14.325 3.74984 10.9917 3.74984L5.91671 3.75817C5.62504 3.75817 5.42504 3.4665 5.57504 3.2165C6.20004 2.18317 7.33338 1.6665 8.99171 1.6665H14.325C16.9834 1.6665 18.3167 2.99984 18.3167 5.65817Z"
+                            fill="black" fill-opacity="0.88" />
+                    </svg>
+                </button>
                 </div>
                 <div class="absolute bottom-0 right-0 ">
                     <img src="./img/gridbg.png" alt="">
