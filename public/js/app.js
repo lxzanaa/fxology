@@ -17,29 +17,38 @@ let list_city_modal__list = document.querySelector(".list_city_modal__list");
 let list_number_modal__list = document.querySelector(".list_number_modal__list");
 
 function toggleModal(modal, modalList) {
-  // Barcha modallarni yopish
-  [list_modal, list_state_modal, list_city_modal, number_modal].forEach(function (otherModal) {
-    if (otherModal !== modal) {
-      otherModal.classList.add("h-0", "border-transparent");
-      otherModal.classList.remove("h-[345px]", "border-[#FFFFFF1A]", "mt-[11px]");
-    }
-  });
+  // Agar modal ochilgan bo'lsa, uni yopish
+  if (modal.classList.contains("h-[345px]")) {
+    modal.classList.add("h-0", "border-transparent");
+    modal.classList.remove("h-[345px]", "border-[#FFFFFF1A]", "mt-[11px]");
+    modalList.classList.remove("overflow-y-auto");
+    modalList.classList.add("overflow-hidden");
+  } else {
+    // Barcha modallarni yopish
+    closeAllModals(); // Modallarni yopish funksiyasi
 
-  if (modal.classList.contains("h-0")) {
+    // Modalni ochish
     modal.classList.remove("h-0", "border-transparent");
     modal.classList.add("h-[345px]", "border-[#FFFFFF1A]");
     modal.classList.remove("mt-0");
     modal.classList.add("mt-[11px]");
     modalList.classList.remove("overflow-hidden");
     modalList.classList.add("overflow-y-auto");
-  } else {
+  }
+}
+
+// Barcha modallarni yopish funksiyasi
+function closeAllModals() {
+  [list_modal, list_state_modal, list_city_modal, number_modal].forEach(function (modal) {
     modal.classList.add("h-0", "border-transparent");
-    modal.classList.remove("h-[345px]", "border-[#FFFFFF1A]");
-    modal.classList.remove("mt-[11px]");
-    modal.classList.add("mt-0");
+    modal.classList.remove("h-[345px]", "border-[#FFFFFF1A]", "mt-[11px]");
+  });
+
+  // Modal listalarning overflow'ini to'g'irlash
+  [list_modal__list, list_state_modal__list, list_city_modal__list, list_number_modal__list].forEach(function (modalList) {
     modalList.classList.remove("overflow-y-auto");
     modalList.classList.add("overflow-hidden");
-  }
+  });
 }
 
 document.querySelector(".list_tooggle").addEventListener("click", function () {
@@ -73,6 +82,7 @@ function activateItem(items, svgs, borders, textElement, targetElement, index) {
 // Country item tanlanganda
 list_item.forEach((item, index) => {
   item.addEventListener("click", function () {
+    closeAllModals(); // Modallarni yopish
     activateItem(list_item, list_svg, list_border_b, list_text, country, index);
   });
 });
@@ -85,6 +95,7 @@ let list_state_text = document.querySelectorAll(".list_state_text");
 
 list_state_item.forEach((item, index) => {
   item.addEventListener("click", function () {
+    closeAllModals(); // Modallarni yopish
     activateItem(list_state_item, list_state_svg, list_state_border_b, list_state_text, state, index);
   });
 });
@@ -97,77 +108,7 @@ let list_city_text = document.querySelectorAll(".list_city_text");
 
 list_city_item.forEach((item, index) => {
   item.addEventListener("click", function () {
+    closeAllModals(); // Modallarni yopish
     activateItem(list_city_item, list_city_svg, list_city_border_b, list_city_text, city, index);
   });
 });
-
-function inputs() {
-  const inputs = document.querySelectorAll("input");
-  inputs.forEach(function (item) {
-    if (item.type !== "checkbox") {
-      const label = item.previousElementSibling; // Assuming the label is right before the input
-
-      if (!item.classList.contains("clicked")) {
-        item.classList.add("transparent-placeholder");
-      } else {
-        item.classList.remove("transparent-placeholder");
-      }
-
-      item.addEventListener("focus", function () {
-        item.classList.add("mt-2");
-        item.classList.add("clicked");
-        item.classList.remove("transparent-placeholder");
-        label.classList.remove("top-1/2");
-        label.classList.add("top-[12px]");
-      });
-
-      item.addEventListener("blur", function () {
-        if (item.value === "") {
-          item.classList.remove("clicked");
-          item.classList.add("transparent-placeholder");
-          label.classList.remove("top-[12px]");
-          label.classList.add("top-1/2");
-        }
-      });
-    }
-  });
-}
-inputs();
-
-
-function inputs() {
-  const inputs = document.querySelectorAll("input");
-  inputs.forEach(function (item, index) {
-    if (item.type !== "checkbox") {
-      const label = item.previousElementSibling; // Assuming the label is right before the input
-
-      // Initial styles based on input's value
-      if (!item.classList.contains("clicked")) {
-        item.classList.add("transparent-placeholder");
-      } else {
-        item.classList.remove("transparent-placeholder");
-      }
-
-      // On focus (when input is clicked)
-      item.addEventListener("focus", function () {
-        item.classList.add("mt-2");
-        item.classList.add("clicked");
-        item.classList.remove("transparent-placeholder");
-        label.classList.remove("top-1/2");
-        label.classList.add("top-[12px]");
-      });
-
-      // On blur (when input loses focus)
-      item.addEventListener("blur", function () {
-        if (item.value === "") {
-          // Reset styles if the input is empty
-          item.classList.remove("clicked");
-          item.classList.add("transparent-placeholder");
-          label.classList.remove("top-[12px]");
-          label.classList.add("top-1/2");
-        }
-      });
-    }
-  });
-}
-inputs();

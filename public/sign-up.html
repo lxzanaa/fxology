@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Sign in</title>
 </head>
+
 <style>
     .custom-checkbox {
         -webkit-appearance: none;
@@ -31,77 +32,28 @@
     }
 
     .custom-checkbox:checked::after {
-        content: url(./img/Vector.svg);
+        content: url(./img/second/Vector.svg);
     }
+    @font-face {
+        font-family: ppMori;
+        src: url(./fonts/ppmori-regular.otf);
+    }
+
+    .submit_btn:hover{
+    box-shadow: 0px 0px 20px 0px #FFFFFF80
+}
+
 </style>
 
-<body class="bg-[#0E0F11]">
-
-
-    <!-- <button id="open-modal-2"  >open modal</button> -->
-    <div id="modal-2"
-        class="bg-[#0D331566]/40 absolute top-0 left-0 z-50 h-full w-full flex justify-center items-center hidden opacity-0 inset-0">
-        <div class="pr-8">
-            <button id="close-modal-2" class="p-3 bg-[#0E0F11] rounded-lg flex ml-auto translate-x-8">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 9L8.71968 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M8.71968 9L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </button>
-            <div class="w-[436px] border-white/10 border p-1.5 rounded-2xl bg-[#0E0F11] relative"
-                style="background: linear-gradient(0deg, #0E0F11, #0E0F11), linear-gradient(167.98deg, #161B1F 0.59%, rgba(22, 27, 31, 0) 40.04%);">
-                <div>
-                    <img class="absolute top-0 left-4" src="./img/register/shadow-mini.png" alt="shadow">
-                </div>
-                <div class="border-white/10 border rounded-[14px] p-6">
-                    <div class="mb-6">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M21.56 10.7401L20.21 9.16008C19.96 8.86008 19.75 8.30008 19.75 7.90008V6.20008C19.75 5.14008 18.88 4.27008 17.82 4.27008H16.12C15.72 4.27008 15.15 4.06008 14.85 3.81008L13.27 2.46008C12.58 1.87008 11.45 1.87008 10.76 2.46008L9.16 3.81008C8.86 4.06008 8.3 4.27008 7.9 4.27008H6.17C5.11 4.27008 4.24 5.14008 4.24 6.20008V7.90008C4.24 8.29008 4.04 8.85008 3.79 9.15008L2.44 10.7401C1.86 11.4401 1.86 12.5601 2.44 13.2401L3.79 14.8301C4.04 15.1201 4.24 15.6901 4.24 16.0801V17.7901C4.24 18.8501 5.11 19.7201 6.17 19.7201H7.91C8.3 19.7201 8.87 19.9301 9.17 20.1801L10.75 21.5301C11.44 22.1201 12.57 22.1201 13.26 21.5301L14.84 20.1801C15.14 19.9301 15.7 19.7201 16.1 19.7201H17.8C18.86 19.7201 19.73 18.8501 19.73 17.7901V16.0901C19.73 15.6901 19.94 15.1301 20.19 14.8301L21.54 13.2501C22.15 12.5701 22.15 11.4401 21.56 10.7401ZM11.25 8.13008C11.25 7.72008 11.59 7.38008 12 7.38008C12.41 7.38008 12.75 7.72008 12.75 8.13008V12.9601C12.75 13.3701 12.41 13.7101 12 13.7101C11.59 13.7101 11.25 13.3701 11.25 12.9601V8.13008ZM12 16.8701C11.45 16.8701 11 16.4201 11 15.8701C11 15.3201 11.44 14.8701 12 14.8701C12.55 14.8701 13 15.3201 13 15.8701C13 16.4201 12.56 16.8701 12 16.8701Z"
-                                fill="url(#paint0_linear_62_14850)" />
-                            <defs>
-                                <linearGradient id="paint0_linear_62_14850" x1="12.0025" y1="2.01758" x2="12.0025"
-                                    y2="21.9726" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#58E877" />
-                                    <stop offset="1" stop-color="#C8FBD3" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <h4 class="text-white text-lg mb-6">Service Unavailable in Your Country</h4>
-                    <p class="text-white/50 text-sm mb-8">We regret to inform you that we are unable to provide our
-                        services in your selected country due to restrictions. <br><br>
-                        We apologize for any inconvenience this may cause. For more information, please refer to the
-                        OFAC list or contact our <a class="underline text-[#FFFBA1]" href="#">support team</a> for
-                        assistance.</p>
-                    <button id="close-modal-2"
-                        class="flex items-center gap-2 py-3 px-7 text-white font-semibold text-sm rounded-xl"
-                        style="background: linear-gradient(185.85deg, rgba(255, 255, 255, 0.1) 15.16%, rgba(255, 255, 255, 0) 86.96%); border: 1px solid; border-image-source: linear-gradient(262.74deg, rgba(255, 255, 255, 0.1) 12.49%, rgba(255, 255, 255, 0.05) 102.33%), radial-gradient(129.17% 687.04% at 102.36% 129.17%, rgba(255, 255, 255, 0) 14.78%, rgba(255, 255, 255, 0.5) 66%, rgba(255, 255, 255, 0) 100%) ;">Close
-                        <span>
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.1203 5.95312L16.167 9.99979L12.1203 14.0465" stroke="white"
-                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M4.83282 10H16.0528" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+<body class="bg-[#0D0E10] ">
     <section class="bg-[#0D0E10] relative  z-20  w-full flex items-center justify-center  pt-4 pb-3.5">
-        <div class="max-w-[1248px] w-full flex gap-4 mx-auto">
-            <div class="flex flex-col  max-w-[436px] w-full px-[17px] pt-[17px] pb-6 rounded-[20px] border border-[#FFFFFF1A]"
+        <div class="max-w-[1248px] w-full flex gap-4 mx-auto max-xl:px-5">
+            <div class="max-lg:hidden flex flex-col  max-w-[436px] w-full px-[17px] pt-[17px] pb-6 rounded-[20px] border border-[#FFFFFF1A]"
                 style="
-    background-image: url(./img/steps.png) ;
-    background-size: cover;
-    background-position: top;
-        ">
+            background-image: url(./img/second/steps.png) ;
+            background-size: cover;
+            background-position: top;
+                ">
                 <a href="#" class="max-w-[88px] w-full mb-[406px] ">
                     <svg width="88" height="33" viewBox="0 0 88 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -136,7 +88,7 @@
                     </svg>
                 </a>
                 <div class="">
-                    <h2 class="max-w-[175px] text-white font-normal text-lg mb-[29px] leading-[35px]">Create your
+                    <h2 class="font-[ppMori] max-w-[175px] text-white font-normal text-lg mb-[29px] leading-[17.5px]">Create your
                         account in a few
                         clicks</h2>
                     <div class="max-w-[191px] flex gap-[18px] items-center mb-[43px]">
@@ -240,15 +192,14 @@
                     </div>
                 </div>
                 <div class="flex items-center ">
-                    <a href="#" class="font-normal text-xs text-[#FFFFFF80] mr-auto">Copyright © FXology 2024</a>
-                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline mr-2">Terms & Conditions </a>
-                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline">Privacy Policy</a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF80] mr-auto leading-[8px]">Copyright © FXology 2024</a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline mr-2 leading-[8px]">Terms & Conditions </a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline leading-[8px]">Privacy Policy</a>
                 </div>
             </div>
-
-            <div class="max-w-[768px] relative w-full border border-[#FFFFFF1A] rounded-[20px] pl-[84px] pr-4 pt-4 pb-6"
+            <div class="lg:max-w-[768px]  relative w-full border border-[#FFFFFF1A] rounded-[20px] px-4 lg:pl-[84px] md:pr-4 pt-4 pb-6"
                 style="background: linear-gradient(0deg, rgba(14, 15, 17, 0.5), rgba(14, 15, 17, 0.5)), linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%); width: 100%; ">
-                <div class="absolute top-0 left-[55px]">
+                <div class="max-md:hidden absolute top-0 left-0 md:left-[55px]">
                     <svg width="134" height="55" viewBox="0 0 134 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_f_1_52097)">
                             <path d="M27 4H109L124 45H10L27 4Z" fill="url(#paint0_linear_1_52097)" />
@@ -290,7 +241,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="flex items-center mb-[30px]">
+                <div class="flex items-center max-md:justify-between mb-[30px]">
                     <a href="#" class="relative z-20 flex items-center gap-1">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -303,15 +254,16 @@
 
                         <p class="font-normal text-sm text-[#FFFFFF] leading-4">Back</p>
                     </a>
-                    <a href="#" class="ml-auto font-normal text-sm text-[#FFFFFF] leading-[10px]">Already have an
+                    <a href="./login.html" class="max-md:hidden ml-auto font-normal text-sm text-[#FFFFFF] leading-[10px] transition-all duration-300 hover:opacity-50">Already
+                        have an
                         account?</a>
-                    <a href="#" class="flex items-center gap-1 rounded-xl  py-2 pl-4 pr-3 ml-4" style="
+                    <a href="./login.html" class="transition-all duration-300 hover:opacity-50 flex items-center gap-1 rounded-xl  py-2 pl-4 pr-3 ml-4" style="
                     background: linear-gradient(185.85deg, rgba(255, 255, 255, 0.1) 15.16%, rgba(255, 255, 255, 0) 86.96%);
                     border: 1px solid #636568;
                     border-image-source: linear-gradient(262.74deg, rgba(255, 255, 255, 0.1) 12.49%, rgba(255, 255, 255, 0.05) 102.33%),
                     radial-gradient(129.17% 687.04% at 102.36% 129.17%, rgba(255, 255, 255, 0) 14.78%, rgba(255, 255, 255, 0.5) 66%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
                     ">
-                        <p class="text-[#FFFFFF] leading-[10px] text-sm">Log In</p>
+                        <p class="font-semibold text-[#FFFFFF]  text-sm leading-[10px]">Log In</p>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.6204 5.95312L15.667 9.99979L11.6204 14.0465" stroke="white" stroke-width="1.5"
                                 stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -320,16 +272,16 @@
                         </svg>
                     </a>
                 </div>
-                <h1 class="font-normal text-2xl mb-2 text-[#FFFFFF] leading-7">Before You Start</h1>
-                <p class="font-normal text-sm text-[#FFFFFF80] mb-8 leading-4">Please complete these fields to proceed
+                <h1 class="font-normal md:text-2xl text-xl mb-2 text-[#FFFFFF] leading-7">Before You Start</h1>
+                <p class="font-normal text-sm text-[#FFFFFF80] mb-8 leading-[10px]">Please complete these fields to proceed
                 </p>
-                <form class="flex flex-col gap-y-4 max-w-[567px]">
-                    <div class="grid grid-cols-2 gap-x-3">
+                <form class="flex flex-col gap-y-4 max-w-[567px] ">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <div
                             class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
                             <label for="username" id="username-label"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Username</label>
-                            <input type="text" required id="username"
+                            <input autocomplete="off" type="text" required id="username"
                                 class="w-full h-full bg-transparent text-white outline-none" placeholder="Username">
                         </div>
                         <div
@@ -337,17 +289,17 @@
                             <label for="username" id="lastname-label"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Last
                                 name</label>
-                            <input type="text" required id="lastname-label"
+                            <input autocomplete="off" type="text" required id="lastname-label"
                                 class="w-full h-full bg-transparent text-white outline-none" placeholder="Last name">
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-x-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <div
                             class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
                             <label for="username" id="AddressLine1"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Address
                                 Line 1</label>
-                            <input type="text" required id="AddressLine1"
+                            <input autocomplete="off" type="text" required id="AddressLine1"
                                 class="w-full h-full bg-transparent text-white outline-none"
                                 placeholder="Address Line 1">
                         </div>
@@ -356,7 +308,7 @@
                             <label for="AddressLine2" id="AddressLine2"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Address
                                 Line 2</label>
-                            <input type="text" required id="AddressLine2"
+                            <input autocomplete="off" type="text" required id="AddressLine2"
                                 class="w-full h-full bg-transparent text-white outline-none"
                                 placeholder="Address Line 2">
                         </div>
@@ -375,10 +327,10 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="list_modal z-30 h-0 overflow-hidden  max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent "
+                        <div class="list_modal z-30 h-0 overflow-hidden  max-h-[200px] md:max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent "
                             style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                             <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
-                                <input type="search"
+                                <input autocomplete="off" type="search"
                                     class="outline-none text-left border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
                                     placeholder="Search" name="search" id="search">
                                 <button class="">
@@ -396,7 +348,7 @@
                             <div class="pr-[7px]">
                                 <div class="">
                                     <ul
-                                        class="max-h-[345px] list_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
+                                        class="max-h-[200px] md:max-h-[345px] list_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
                                         <div class="">
                                             <li
                                                 class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
@@ -533,8 +485,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 w-full">
-                        <div class="relative w-full max-w-[383px]">
+                    <div class="flex items-center max-sm:flex-col gap-3 w-full">
+                        <div class="relative w-full md:max-w-[383px]">
                             <div
                                 class="list_state_toogle_modal mt-0 cursor-pointer w-full flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
                                 <p class="state font-normal text-xs text-[#FFFFFF80]">State</p>
@@ -546,10 +498,10 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <div class="list_state_modal z-30 h-0 overflow-hidden max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                            <div class="list_state_modal z-30 h-0 overflow-hidden max-h-[200px] md:max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
                                 style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                                 <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
-                                    <input type="search"
+                                    <input autocomplete="off" type="search"
                                         class="outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
                                         placeholder="Search" name="search" id="search">
                                     <button class="">
@@ -567,7 +519,7 @@
                                 <div class="pr-[7px]">
                                     <div class="">
                                         <ul
-                                            class="max-h-[345px] list_state_modal__list overflow-y-auto custom-scrollbar pr-[7px]">
+                                            class="max-h-[200px] md:max-h-[345px] list_state_modal__list overflow-y-auto custom-scrollbar pr-[7px]">
                                             <div class="">
                                                 <li
                                                     class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
@@ -707,11 +659,11 @@
                             <label for="Postalcode" id="Postalcode"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Postal
                                 code</label>
-                            <input type="text" required id="Postalcode"
+                            <input autocomplete="off" type="text" required id="Postalcode"
                                 class="w-full h-full bg-transparent text-white outline-none " placeholder="Postal code">
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative ">
                         <div
                             class="list_city_toogle_modal cursor-pointer flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
                             <p class="city font-normal text-xs text-[#FFFFFF80]">City</p>
@@ -725,10 +677,10 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="list_city_modal z-30 h-0 overflow-hidden max-h-[300px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                        <div class="list_city_modal z-30 h-0 overflow-hidden max-h-[200px] md:max-h-[250px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
                             style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                             <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
-                                <input type="search"
+                                <input autocomplete="off" type="search"
                                     class="outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
                                     placeholder="Search" name="search" id="search">
                                 <button class="">
@@ -745,7 +697,7 @@
                             </div>
                             <div class="pr-[7px]">
                                 <ul
-                                    class="max-h-[345px]  list_city_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-24">
+                                    class="max-h-[200px] md:max-h-[250px]  list_city_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-12">
                                     <div class="">
                                         <li
                                             class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
@@ -855,8 +807,8 @@
                         <div class="relative">
                             <div
                                 class="number_open cursor-pointer flex items-center gap-2 border border-[#FFFFFF1A] rounded-xl bg-[#16191D] px-4 py-[15px]">
-                                <div class="w-6 overflow-hidden rounded-full">
-                                    <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                    <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                 </div>
                                 <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                 <button type="button">
@@ -869,49 +821,49 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="number_modal max-h-[145px] z-30 pr-[7px] h-0 overflow-hidden   transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                            <div class="number_modal max-h-[130px] md:max-h-[145px] z-30 pr-[7px] h-0 overflow-hidden   transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
                                 style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                                 <div
-                                    class="flex flex-col gap-2.5 p-2.5 max-h-[145px] list_number_modal__list  overscroll-y-auto custom-scrollbar pr-[7px]">
-                                    <div class="flex items-center gap-2 w-full">
-                                        <div class="w-6 overflow-hidden rounded-full">
-                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                    class="flex flex-col gap-2.5  pl-4 py-3   md:p-2.5 max-h-[145px] list_number_modal__list  overscroll-y-auto custom-scrollbar pr-[7px]">
+                                    <div class="flex items-center py-2 gap-2 w-full">
+                                        <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                            <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                         </div>
                                         <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                     </div>
-                                    <div class="flex items-center gap-2 w-full">
-                                        <div class="w-6 overflow-hidden rounded-full">
-                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                    <div class="flex items-center py-2 gap-2 w-full">
+                                        <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                            <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                         </div>
                                         <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                     </div>
-                                    <div class="flex items-center gap-2 w-full">
-                                        <div class="w-6 overflow-hidden rounded-full">
-                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                    <div class="flex items-center py-2 gap-2 w-full">
+                                        <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                            <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                         </div>
                                         <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                     </div>
-                                    <div class="flex items-center gap-2 w-full">
-                                        <div class="w-6 overflow-hidden rounded-full">
-                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                    <div class="flex items-center py-2 gap-2 w-full">
+                                        <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                            <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                         </div>
                                         <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                     </div>
-                                    <div class="flex items-center gap-2 w-full">
-                                        <div class="w-6 overflow-hidden rounded-full">
-                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                    <div class="flex items-center py-2 gap-2 w-full">
+                                        <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                            <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                         </div>
                                         <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                     </div>
-                                    <div class="flex items-center gap-2 w-full">
-                                        <div class="w-6 overflow-hidden rounded-full">
-                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                    <div class="flex items-center py-2 gap-2 w-full">
+                                        <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                            <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                         </div>
                                         <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                     </div>
-                                    <div class="flex items-center gap-2 w-full">
-                                        <div class="w-6 overflow-hidden rounded-full">
-                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                    <div class="flex items-center py-2 gap-2 w-full">
+                                        <div class="max-md:hidden  w-6 overflow-hidden rounded-full">
+                                            <img src="./img/second/uk.png" alt="uk" class="w-full object-cover">
                                         </div>
                                         <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
                                     </div>
@@ -921,11 +873,11 @@
                         <!-- invalid_border  numberga natogri malumot kiritilganda shu classni qoyish kerak -->
                         <div class="w-full">
                             <div
-                                class="w-full relative h-[54px] invalid_border border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                                class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
                                 <label for="number" id="number"
                                     class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">00
                                     000 00 00</label>
-                                <input type="text" required id="number"
+                                <input autocomplete="off" type="text" required id="number"
                                     class="w-full h-full bg-transparent text-white outline-none "
                                     placeholder="00 000 00 00">
 
@@ -935,28 +887,44 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-2 mb-12">
-                        <input type="checkbox" name="checkbox" id="checkbox" class="custom-checkbox mt-0">
-                        <label for="checkbox" class="cursor-pointer font-normal text-sm text-[#FFFFFF] leading-4">I
-                            confirm that my
-                            name is
-                            correct and matches my government issued ID</label>
+                        <input autocomplete="off" type="checkbox" name="checkbox" id="checkbox"
+                            class="custom-checkbox mt-0">
+                        <label for="checkbox"
+                            class="cursor-pointer font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                            I confirm that my name is correct and matches my government issued ID
+                        </label>
                     </div>
-                    <button type="submit"
-                        class="bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl"
-                        style="box-shadow: 0px 0px 20px 0px #FFFFFF80;">
-                        <p class="">
-                            Next
-                        </p>
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="36" height="36" rx="12" fill="#58E877" />
-                            <path d="M20.0249 12.9414L25.0832 17.9997L20.0249 23.0581" stroke="white" stroke-width="1.5"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M10.9167 18H24.9417" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
+                    <div class="flex items-center ">
+                        <button type="submit"
+                            class="submit_btn transition-all duration-300 bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl">
+                            <p class="font-semibold text-sm leading-[10px]">
+                                Next
+                            </p>
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="36" height="36" rx="12" fill="#58E877" />
+                                <path d="M20.0249 12.9414L25.0832 17.9997L20.0249 23.0581" stroke="white"
+                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10.9167 18H24.9417" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="md:hidden relative z-20 p-2.5 ml-auto block rounded-xl"
+                            style="background: linear-gradient(135.81deg, #3BE46A 23.26%, #E8FFCA 80.89%);">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.9917 5H5.65841C5.44175 5 5.23341 5.00833 5.03341 5.03333C2.79175 5.225 1.66675 6.55 1.66675 8.99167V12.325C1.66675 15.6583 3.00008 16.3167 5.65841 16.3167H5.99175C6.17508 16.3167 6.41675 16.4417 6.52508 16.5833L7.52508 17.9167C7.96675 18.5083 8.68341 18.5083 9.12508 17.9167L10.1251 16.5833C10.2501 16.4167 10.4501 16.3167 10.6584 16.3167H10.9917C13.4334 16.3167 14.7584 15.2 14.9501 12.95C14.9751 12.75 14.9834 12.5417 14.9834 12.325V8.99167C14.9834 6.33333 13.6501 5 10.9917 5ZM5.41675 11.6667C4.95008 11.6667 4.58341 11.2917 4.58341 10.8333C4.58341 10.375 4.95841 10 5.41675 10C5.87508 10 6.25008 10.375 6.25008 10.8333C6.25008 11.2917 5.87508 11.6667 5.41675 11.6667ZM8.32508 11.6667C7.85841 11.6667 7.49175 11.2917 7.49175 10.8333C7.49175 10.375 7.86675 10 8.32508 10C8.78341 10 9.15841 10.375 9.15841 10.8333C9.15841 11.2917 8.79175 11.6667 8.32508 11.6667ZM11.2417 11.6667C10.7751 11.6667 10.4084 11.2917 10.4084 10.8333C10.4084 10.375 10.7834 10 11.2417 10C11.7001 10 12.0751 10.375 12.0751 10.8333C12.0751 11.2917 11.7001 11.6667 11.2417 11.6667Z"
+                                    fill="black" fill-opacity="0.88" />
+                                <path
+                                    d="M18.3167 5.65817V8.9915C18.3167 10.6582 17.8 11.7915 16.7667 12.4165C16.5167 12.5665 16.225 12.3665 16.225 12.0748L16.2334 8.9915C16.2334 5.65817 14.325 3.74984 10.9917 3.74984L5.91671 3.75817C5.62504 3.75817 5.42504 3.4665 5.57504 3.2165C6.20004 2.18317 7.33338 1.6665 8.99171 1.6665H14.325C16.9834 1.6665 18.3167 2.99984 18.3167 5.65817Z"
+                                    fill="black" fill-opacity="0.88" />
+                            </svg>
+                        </button>
+                    </div>
                 </form>
-                <button class="relative z-20 p-2.5 ml-auto block rounded-xl"
+                <button class="max-md:hidden relative z-20 p-2.5 ml-auto block rounded-xl"
                     style="background: linear-gradient(135.81deg, #3BE46A 23.26%, #E8FFCA 80.89%);">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -967,37 +935,14 @@
                             fill="black" fill-opacity="0.88" />
                     </svg>
                 </button>
-                <div class="absolute bottom-0 right-0 ">
-                    <img src="./img/gridbg.png" alt="">
+                <div class="z-[-1] absolute bottom-0 right-0 ">
+                    <img src="./img/second/gridBg.svg" alt="">
                 </div>
             </div>
         </div>
     </section>
-
-
+    <script src="./js/input.js"></script>
     <script src="./js/app.js"></script>
-    <script>
-        let openModalButton2 = document.querySelectorAll('#open-modal-2'),
-            modal2 = document.querySelectorAll('#modal-2'),
-            closeModal2 = document.querySelectorAll('#close-modal-2');
-
-        openModalButton2.forEach(function (openModal) {
-            openModal.addEventListener('click', function () {
-                modal2.forEach(function (modal) {
-                    modal.classList.add('inset-1', 'opacity-1')
-                    modal.classList.remove('inset-0', 'opacity-0', 'hidden')
-                })
-            })
-        })
-        closeModal2.forEach(function (closeModal) {
-            closeModal.addEventListener('click', function () {
-                modal2.forEach(function (modal2) {
-                    modal2.classList.add('inset-0', 'opacity-0', 'hidden')
-                    modal2.classList.remove('inset-1', 'opacity-1')
-                })
-            })
-        })
-    </script>
 </body>
 
 </html>
